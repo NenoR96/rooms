@@ -1,21 +1,21 @@
-# Article Knowledgebase Application
+# Rooms reservation Application
 
-This is a knowledgebase app used in the "Node.js & Express From Scratch" Youtube series.
 
 ## Technologies
 * Node.js
 * Express
-* Express Messages, Session, Connect Flash & Validation
 * MongoDB & Mongoose
-* Pug Templating
+* Handlebars Templating
 * Passport.js Authentication
 * BCrypt Hashing
+* moment.js
 
 ### Version
-2.0.0
+1.0.0
 
 ## Usage
 
+* In app.js rename the mongoose connection to database to your own or download mongodump files from repository
 
 ### Installation
 
@@ -24,6 +24,13 @@ Install the dependencies
 ```sh
 $ npm install
 ```
+
+Install multer
+
+```sh
+$ npm install multer --save
+```
+
 Run app
 
 ```sh
