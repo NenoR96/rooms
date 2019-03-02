@@ -9,6 +9,8 @@
 * Passport.js Authentication
 * BCrypt Hashing
 * moment.js
+* nodemailer
+* JWT
 
 ### Version
 1.0.0
