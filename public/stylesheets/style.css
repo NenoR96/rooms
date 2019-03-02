@@ -1,0 +1,88 @@
+body {
+  background-image: url("https://carrickswan.com/wp-content/uploads/2016/04/site-background.jpg");
+  height: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.footer {
+  margin-top: 10px;
+  border-radius: 0px;
+  border: none;
+  border-top: 3px solid rgb(79, 171, 233);
+  border-color: rgb(79, 171, 233);
+  background-color: rgb(255, 255, 255);
+}
+
+.navbar {
+  border-radius: 10px;
+  border: none;
+  border-bottom: 3px solid rgb(79, 171, 233);
+  border-color: rgb(79, 171, 233);
+  background-color: rgb(255, 255, 255);
+}
+
+.card {
+  width: 190px;
+  margin-left: 10px;
+  margin-top: 20px;
+  border-style: solid;
+  border-color: rgb(79, 171, 233);
+  background-color: rgba(255, 255, 255, 0.808);
+}
+
+.card img {
+  height: 150px;
+}
+
+a {
+  color: #000000;
+}
+
+a:hover {
+  color: rgb(79, 171, 233);
+  text-decoration: none;
+}
+
+
+.wrapper {	
+	margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.form-signin {
+  max-width: 380px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.1);  
+}
+
+  .form-signin-heading,
+	.checkbox {
+	  margin-bottom: 30px;
+	}
+
+	.checkbox {
+	  font-weight: normal;
+	}
+
+	.form-control {
+	  position: relative;
+	  font-size: 16px;
+	  height: auto;
+	  padding: 10px;
+	}
+
+	input[type="text"] {
+	  margin-bottom: -1px;
+	  border-bottom-left-radius: 0;
+	  border-bottom-right-radius: 0;
+	}
+
+	input[type="password"] {
+	  margin-bottom: 20px;
+	  border-top-left-radius: 0;
+	  border-top-right-radius: 0;
+	}

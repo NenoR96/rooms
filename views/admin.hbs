@@ -1,0 +1,46 @@
+<p>Rooms</p>
+<table class="table table-striped">
+<thead>
+ <tr>
+  <th>ID</th>
+  <th>Number</th>
+  <th>Beds</th>
+  <th>Cost</th>
+ </tr>
+</thead>
+<tbody>         
+ {{#each rooms}}
+    <tr>
+	<td>{{this._id}}</td> 
+    <td>{{this.number}}</td> 
+    <td>{{this.beds}}</td>       
+    <td>{{this.cost}}</td>       
+    </tr>
+ {{/each}}       
+</tbody>
+</table>
+
+
+<p>Reservations</p>
+<table class="table table-striped">
+<thead>
+ <tr>
+  <th>ID</th>
+  <th>Room</th>
+  <th>From</th>
+  <th>To</th>
+ </tr>
+</thead>
+<tbody>         
+ {{#each reservation}}
+    <tr>
+	<td>{{this._id}}</td> 
+    <td>{{this.room}}</td> 
+    <td>{{this.from}}</td>       
+    <td>{{this.to}}</td>       
+    </tr>
+ {{/each}}       
+</tbody>
+</table>
+
+<a href="admin/room" style="color:red">Add room</a>

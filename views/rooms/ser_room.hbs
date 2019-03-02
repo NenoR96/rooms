@@ -1,0 +1,15 @@
+<form action="/room/search" method="post">
+    <div class="form-group">
+        <input type="date", id="start", name="start">
+    </div>      
+    
+    <div class="form-group">
+        <input type="date", id="end", name="end">
+    </div>        
+    <button type="submit" class="btn btn-info btn-lg btn-block">Search for reservation</button>                
+</form>
+
+<script>
+    document.getElementById('start').valueAsDate = new Date();
+    document.getElementById('end').valueAsDate = new Date();
+</script>

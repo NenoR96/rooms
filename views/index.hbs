@@ -1,0 +1,24 @@
+welcome {{user.name}}
+
+{{#each rooms}}
+
+<div class="row">  
+  {{#each this}}
+    <div class="card" style="width: 18rem;">
+  <img class="card-img-top" style="height:200px"src="{{this.img}}" alt="Card image">
+  <div class="card-body">
+    <h5 class="card-title">Room {{this.number}}</h5>
+    <p class="card-text">{{this.type}}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Beds: {{this.beds}}</li>
+    <li class="list-group-item">Capacity: {{this.capacity}}</li>
+    <li class="list-group-item">Costs: {{this.cost}}</li>
+  </ul>
+  <div class="card-body">
+    <a href="room/reservation/{{this._id}}">Make a reservation</a>
+  </div>
+</div>
+{{/each}}
+</div>
+{{/each}}

@@ -1,0 +1,49 @@
+Rooms available in period from {{start}} - {{end}}
+<input type="hidden" id="start" value="{{start}}">
+<input type="hidden" id="end" value="{{end}}">
+{{user}}
+{{#each rooms}}
+  <div class="row">  
+    {{#each this}}
+      <div class="card" style="width: 18rem;">
+      <img class="card-img-top" style="height:200px"src="{{this.img}}" alt="Card image">
+        <div class="card-body">
+          <h5 class="card-title">Room {{this.number}}</h5>
+          <p class="card-text">{{this.type}}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Beds: {{this.beds}}</li>
+          <li class="list-group-item">Capacity: {{this.capacity}}</li>
+          <li class="list-group-item">Costs: {{this.cost}}</li>
+        </ul>
+        <div class="card-body">
+          <button id="submit" data-id="{{this._id}}" class="submit">Make a reservation</button>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+{{/each}}
+
+
+<script>
+  $('.submit').on('click', function(e){
+    $target = $(e.target);
+    const id = $target.attr('data-id');
+    console.log(id);
+    const start = document.getElementById("start").value;
+    const end = document.getElementById("end").value;
+    const ref = "http://localhost:3000/room/reservation/" + id;
+    $.ajax({
+      type:'GET',
+      url: '/room/reservation/'+id,
+      success: function(response){
+        console.log(id);
+        window.location = (ref + "?start=" +  start + "&end=" + end)
+      },
+      error: function(err){
+        console.log(id);
+        console.log(err);
+      }
+    });
+});
+</script>

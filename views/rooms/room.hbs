@@ -1,0 +1,49 @@
+<div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="{{room.img}}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Room {{room.number}}</h5>
+        <p class="card-text">{{room.type}}</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Beds: {{room.beds}}</li>
+        <li class="list-group-item">Capacity: {{room.capacity}}</li>
+        <li class="list-group-item">Costs: {{room.cost}}</li>
+      </ul>
+    </div>
+    {{#if state}}
+    <form action="/room/reservation" method="post">
+      <div class="form-group">
+        <input type="date" , id="start" , name="start" value={{start}}>
+      </div>
+      <input type="hidden" , id="room" , name="room" value={{room._id}}>
+      <div class="form-group">
+        <input type="date" , id="end" , name="end" value={{end}}>
+      </div>
+      <button type="submit" class="btn btn-info btn-lg btn-block">Confirm reservation</button>
+    </form>
+    {{else}}
+    <form action="/room/reservation" method="post">
+      <div class="form-group">
+        <input type="date" , id="start" , name="start">
+      </div>
+      <input type="hidden" , id="room" , name="room" value={{room._id}}>
+      <div class="form-group">
+        <input type="date" , id="end" , name="end">
+      </div>
+      <script>
+        document.getElementById('start').valueAsDate = new Date();
+        document.getElementById('end').valueAsDate = new Date();
+      </script>
+      <button type="submit" class="btn btn-info btn-lg btn-block">Make a reservation</button>
+    </form>
+    {{/if}}
+  </div>
+
+  <div class="col-sm-6 col-md-8">
+    {{#each imgs}}
+    <img src="{{this}}" height="50%" width="50%">
+    {{/each}}
+  </div>
+</div>
